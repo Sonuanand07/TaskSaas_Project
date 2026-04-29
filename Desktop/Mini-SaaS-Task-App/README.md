@@ -51,8 +51,28 @@ Models auto-sync on server start (dev only).
 - Responsive UI
 - Error handling
 
-## Deployment
-- Backend: Render/Heroku (with PG addon)
+## 🚀 Deploy to Render (Automatic - One Click)
+
+1. **Push these changes** to GitHub: `git add . && git commit -m "Add Render config" && git push`
+2. **Render Dashboard** → New → **Web Service** → Connect repo
+3. **Auto-detects** `render.yaml` → creates:
+   - `backend` (API: https://backend-xxx.onrender.com)
+   - `frontend` (UI: https://frontend-xxx.onrender.com)
+4. **Add Environment Variables**:
+   ```
+   Backend service:
+   • DB_URL=postgresql://... (Render Postgres)
+   • JWT_SECRET=your-32char-secret
+   
+   Frontend service:  
+   • VITE_API_URL=https://backend-xxx.onrender.com/api
+   ```
+5. ✅ **Deployed!** (Free tier)
+
+**Alternative (Manual)**: Delete service → recreate with Build: `npm install && cd frontend && npm run build`, Start: `npm start` (uses root package.json + static.json)
+
+## Other Deployment
+- Backend: Heroku (with PG addon)
 - Frontend: Vercel/Netlify
 - DB: Supabase/Neon/Render PG
 

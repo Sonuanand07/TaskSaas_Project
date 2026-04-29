@@ -1,1 +1,16 @@
-# Backend Fix: SQLite3 Missing Package - COMPLETE ✅\n\n- [x] Step 1: Install sqlite3 in backend/ (npm install sqlite3) ✅\n- [x] Step 2: Verify installation (check node_modules/, package.json) ✅ sqlite3/ in node_modules/\n- [x] Step 3: Test backend startup (`npm start` in backend/) ✅ Server on 5000\n- [x] Step 4: Confirm DB connected & synced, dev.sqlite created ✅ Tables: Users, Tasks\n- [x] Step 5: Test full app (frontend/backend) - Backend ready, frontend separate\n- [x] Done: Backend running successfully 🎉\n\nBackend fixed! `npm start --prefix backend` works. dev.sqlite created with models synced.\n\nNext: Run frontend (`cd frontend && npm install && npm run dev`), access http://localhost:5000 API, http://localhost:5173 app.\nMinor: npm audit fix (optional). Add sqlite3 to package.json deps if persistent.
+# Render Deployment Fix - TODO
+
+## Approved Plan Steps
+
+- [x] **Step 1**: Create root `package.json` (monorepo workspaces) ✅
+- [x] **Step 2**: Create `render.yaml` (auto multi-service deploy) ✅
+- [x] **Step 3**: Create `static.json` (static fallback) ✅
+- [x] **Step 4**: Update README.md (instructions) ✅
+- [ ] **Step 5**: Git commit/push + final Render setup
+
+**After all steps**: Push to GitHub → Render auto-deploys both services.
+
+## Status
+All config files ready. Complete Step 5: Git push → Deploy!
+
+Updated TODO.md with Step 4 ✅
